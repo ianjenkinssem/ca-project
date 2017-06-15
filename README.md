@@ -1,3 +1,5 @@
+[![Stories in Ready](https://badge.waffle.io/Gustafssonz/ca-project.png?label=ready&title=Ready)](https://waffle.io/Gustafssonz/ca-project?utm_source=badge)
+[![Stories in Ready](https://badge.waffle.io/timjon13/ca-project.png?label=ready&title=Ready)](https://waffle.io/timjon13/ca-project?utm_source=badge)
 # Keystone project
 
 https://waffle.io/timjon13/ca-project/join
