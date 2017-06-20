@@ -1,15 +1,9 @@
-pipeline {
-	agent any
-	stages {
-		stage('echo'){
-			steps { 
-				echo 'python --version'
-			}
-		}
-		stage('build'){
-			steps {
-			sh 'python root/forkcap/ca-project/src/tests.py'
-			}
-		}
-	}
-}
+node {
+    stage('scm'){
+        checkout poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'f13e393d-d899-4a9b-b857-a4034d025d3f', url: 'https://github.com/ianjenkinssem/ca-project.git']]]
+    }
+    stage('test'){
+	sh 'python tests.py'}   
+    stage('build'){
+	sh 'python run.py'
+
