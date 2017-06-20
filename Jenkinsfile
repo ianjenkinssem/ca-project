@@ -8,7 +8,7 @@ pipeline {
 		}
 		stage('build'){
 			steps {
-			sh 'python --privileged tests.py'
+			sh 'python /src/tests.py'
 			}
 		}
 	}
