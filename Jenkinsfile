@@ -8,7 +8,7 @@ pipeline {
 		}
 		stage('build'){
 			steps {
-			sh 'python /src/tests.py'
+			sh 'python src/tests.py'
 			}
 		}
 	}
