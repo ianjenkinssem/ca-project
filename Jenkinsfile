@@ -8,7 +8,7 @@ pipeline {
 		}
 		stage('build'){
 			steps {
-			sh 'python tests.py'
+			sh 'python /root/forkcap/ca-project/src/tests.py'
 			}
 		}
 	}
