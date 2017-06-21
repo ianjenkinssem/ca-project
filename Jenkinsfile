@@ -4,6 +4,6 @@ node {
 		
 	}
 	stage('test'){
-		sh 'python tests.py'}
+		sh 'python src/tests.py'}
 		
 }
