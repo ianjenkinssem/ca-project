@@ -1,15 +1,6 @@
-pipeline {
-	agent any
-	stages {
-		stage('echo'){
-			steps { 
-				echo 'python --version'
-			}
+node {
+	stage('Preparation') {
+		git credentialsId: '81d41abf03e64ac480f8ce4e9ceb2310', url: 'https://github.com/ianjenkinssem/ca-project.git'
 		}
-		stage('build'){
-			steps {
-			sh 'python src/tests.py'
-			}
-		}
-	}
+		
 }
