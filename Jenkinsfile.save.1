@@ -1,0 +1,14 @@
+node {
+	stage('scm'){checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ianjenkinssem/ca-project.git']]ages {
+		stage('echo'){
+			steps { 
+				echo 'python --version'
+			}
+		}
+		stage('build'){
+			steps {
+			sh 'python root/forkcap/ca-project/src/tests.py'
+			}
+		}
+	}
+}
